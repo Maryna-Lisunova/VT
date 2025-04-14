@@ -7,13 +7,13 @@ class AdminController {
     private $allowedDirectories = ['', 'images', 'css', 'html', 'js'];
   
 public function index() {
-    $directory = $_GET['directory'] ?? ''; // Получаем параметр из URL
+    $directory = $_GET['directory'] ?? ''; 
     $path = realpath(__DIR__ . '/../../Public/' . $directory);
 
     if ($this->isAllowed($path)) {
-        $files = scandir($path); // Сканируем содержимое папки
-        $currentPath = $path; // Передаём текущий путь в представление
-        require_once __DIR__ . '/../Views/Admin/admin.php'; // Подключаем файл представления
+        $files = scandir($path);
+        $currentPath = $path;
+        require_once __DIR__ . '/../Views/Admin/admin.php';
     } else {
         echo "Доступ запрещен!";
     }
@@ -53,8 +53,6 @@ public function uploadFile() {
 }
 
 }
-
-
    
 private function isAllowed($path) {
     $publicRoot = realpath(__DIR__ . '/../../Public');

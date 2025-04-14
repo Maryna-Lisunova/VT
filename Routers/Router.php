@@ -8,7 +8,7 @@ class Router {
         $controllerName = ucfirst($parts[0] ?? '') . 'Controller';
 
         if (empty($parts[0])) {
-            $controllerName = 'AdminController'; // Контроллер по умолчанию
+            $controllerName = 'AdminController';
         }
 
         $action = $parts[1] ?? 'index';
