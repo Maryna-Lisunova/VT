@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin File Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Admin File Manager</h1>
+    <div id="file-manager">
+        <input type="file" id="file-input">
+        <button onclick="uploadFile()">Upload File</button>
+        <ul id="file-list"></ul>
+    </div>
+
+    <script>        
+        function uploadFile() {
+            const input = document.getElementById('file-input');
+            const formData = new FormData();
+            formData.append('file', input.files[0]);
+            formData.append('DataBase', 'images'); 
+
+            fetch('file_manager.php', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+        }
+
+        function listFiles(directory) {
+            fetch(`file_manager.php?directory=${directory}`)
+            .then(response => response.json())
+            .then(files => {
+                const fileList = document.getElementById('file-list');
+                fileList.innerHTML = '';
+                files.forEach(file => {
+                    const li = document.createElement('li');
+                    li.textContent = file;
+                    fileList.appendChild(li);
+                });
+            });
+        }
+
+        listFiles('/Public/images');
+    </script>
+</body>
+</html>

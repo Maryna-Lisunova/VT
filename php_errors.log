@@ -1,0 +1,74 @@
+[14-Apr-2025 02:57:22 Europe/Minsk] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Router::route(), 0 passed in C:\WebData\_site1\apps\my_project\index.php on line 11 and exactly 1 expected in C:\WebData\_site1\apps\my_project\Routers\Router.php:6
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\index.php(11): Router::route()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\Routers\Router.php on line 6
+[14-Apr-2025 10:25:12 Europe/Minsk] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Router::route(), 0 passed in C:\WebData\_site1\apps\my_project\index.php on line 9 and exactly 1 expected in C:\WebData\_site1\apps\my_project\Routers\Router.php:6
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\index.php(9): Router::route()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\Routers\Router.php on line 6
+[14-Apr-2025 10:41:56 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Controller" not found in C:\WebData\_site1\apps\my_project\Routers\Router.php:15
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\index.php(10): Router::route('')
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\Routers\Router.php on line 15
+[14-Apr-2025 11:14:27 Europe/Minsk] PHP Warning:  require_once(C:\WebData\_site1\apps\my_project\App\Controllers/../Views/admin.php): Failed to open stream: No such file or directory in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 15
+[14-Apr-2025 11:14:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:14:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:14:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:14:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:14:27 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\WebData\_site1\apps\my_project\App\Controllers/../Views/admin.php' (include_path='.;C:\php\pear') in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(21): AdminController->index()
+#1 C:\WebData\_site1\apps\my_project\index.php(5): Router::route('')
+#2 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 15
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Warning:  Undefined variable $path in C:\WebData\_site1\apps\my_project\App\Views\Admin\admin.php on line 16
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Warning:  Undefined variable $path in C:\WebData\_site1\apps\my_project\App\Views\Admin\admin.php on line 16
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Warning:  Undefined variable $path in C:\WebData\_site1\apps\my_project\App\Views\Admin\admin.php on line 16
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Warning:  Undefined variable $path in C:\WebData\_site1\apps\my_project\App\Views\Admin\admin.php on line 16
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Warning:  Undefined variable $path in C:\WebData\_site1\apps\my_project\App\Views\Admin\admin.php on line 16
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Warning:  Undefined variable $path in C:\WebData\_site1\apps\my_project\App\Views\Admin\admin.php on line 16
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Warning:  Undefined variable $path in C:\WebData\_site1\apps\my_project\App\Views\Admin\admin.php on line 16
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Warning:  Undefined variable $path in C:\WebData\_site1\apps\my_project\App\Views\Admin\admin.php on line 16
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP Stack trace:
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:5
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   3. AdminController->index() C:\WebData\_site1\apps\my_project\Routers\Router.php:21
+[14-Apr-2025 11:20:27 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:15
