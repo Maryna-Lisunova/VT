@@ -2,6 +2,13 @@
 
 declare(strict_types=1);
 
+// Пример в файле /my_project/Routers/Router.php
+$requestUri = ltrim($_SERVER['REQUEST_URI'], '/');
+if (preg_match("#^admin/?$#i", $requestUri)) {
+    require_once __DIR__ . '/../Admin/index.php';
+    exit;
+}
+
 class Router {
     public static function route($url) {
         $parts = explode('/', $url);

@@ -7,42 +7,41 @@
 </head>
 <body>
     <h1>Файловый менеджер</h1>
-
     <h2>Текущая папка: <?= htmlspecialchars($currentPath) ?></h2>
+    
     <ul>
         <?php foreach ($files as $file): ?>
-            <li>
-                <?php if (is_dir($currentPath . '/' . $file) && $file !== '.' && $file !== '..'): ?>
-                    <!-- Ссылка для входа в папку -->
-                    <a href="/admin/index?directory=<?= urlencode($directory . '/' . $file) ?>">
-                        📁 <?= htmlspecialchars($file) ?>
-                    </a>
-                <?php else: ?>
-                    <?= htmlspecialchars($file) ?>
-                    <?php if (is_file($currentPath . '/' . $file)): ?>
-                        <form method="POST" action="/admin/deleteFile">
-                            <input type="hidden" name="file" value="<?= htmlspecialchars($file) ?>">
-                            <button type="submit">Удалить</button>
-                        </form>
+            <?php if ($file !== '.' && $file !== '..'): ?>
+                <li>
+                    <?php $fullPath = $currentPath . '/' . $file; ?>
+                    <?php if (is_dir($fullPath)): ?>
+                        <!-- Ссылка для перехода в папку -->
+                        <a href="?route=admin/index&directory=<?= urlencode(($directory ? $directory . '/' : '') . $file) ?>">
+                            📁 <?= htmlspecialchars($file) ?>
+                        </a>
+                    <?php else: ?>
+                        <?= htmlspecialchars($file) ?>
+                        <?php if (is_file($fullPath)): ?>
+                            <!-- Форма для удаления файла -->
+                            <form method="POST" action="?route=admin/deleteFile" style="display:inline;">
+                                <input type="hidden" name="file" value="<?= htmlspecialchars($file) ?>">
+                                <input type="hidden" name="directory" value="<?= htmlspecialchars($directory) ?>">
+                                <button type="submit">Удалить</button>
+                            </form>
+                        <?php endif; ?>
                     <?php endif; ?>
-                <?php endif; ?>
-            </li>
+                </li>
+            <?php endif; ?>
         <?php endforeach; ?>
     </ul>
 
-    
+    <hr>
 
-<form method="POST" action="/index.php?route=admin/deleteFile">
-    <input type="hidden" name="file" value="<?= htmlspecialchars($file) ?>">
-    <input type="hidden" name="directory" value="<?= htmlspecialchars($directory) ?>">
-    <button type="submit">Удалить</button>
-</form>
-
-<form method="POST" action="/index.php?route=admin/uploadFile" enctype="multipart/form-data">
-    <input type="hidden" name="directory" value="<?= htmlspecialchars($directory) ?>">
-    <input type="file" name="file">
-    <button type="submit">Загрузить</button>
-</form>
-
+    <h3>Загрузить файл:</h3>
+    <form method="POST" action="?route=admin/uploadFile" enctype="multipart/form-data">
+        <input type="hidden" name="directory" value="<?= htmlspecialchars($directory) ?>">
+        <input type="file" name="file">
+        <button type="submit">Загрузить</button>
+    </form>
 </body>
 </html>

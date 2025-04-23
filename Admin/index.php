@@ -1,14 +1,23 @@
 <?php
-
-// Активируем строгую типизацию
 declare(strict_types=1);
 
-// Подключение роутера
-require_once __DIR__ . "/Routers/Router.php";
+// HTTP Basic Authentication
+$validUser = 'admin';
+$validPassword = '12345678';
 
-// Получаем маршрут из URL
-$url = $_GET['route'] ?? 'admin/index'; // По умолчанию admin/index
+if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    header('WWW-Authenticate: Basic realm="Админская панель"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo 'Требуется авторизация';
+    exit;
+} else {
+    if ($_SERVER['PHP_AUTH_USER'] !== $validUser || $_SERVER['PHP_AUTH_PW'] !== $validPassword) {
+        header('HTTP/1.0 403 Forbidden');
+        echo 'Неверные данные авторизации';
+        exit;
+    }
+}
 
-// Вызов маршрута
+require_once __DIR__ . "/../Routers/Router.php";
+$url = $_GET['route'] ?? 'admin/index'; 
 Router::route($url);
-

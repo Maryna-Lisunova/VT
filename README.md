@@ -1,5 +1,7 @@
 /my_project
 	/Admin
+	   /.htaccess
+	   /index.php
 	   /php_errors.log
 	/App
 	   /Controllers
@@ -27,7 +29,7 @@
 	/Services
 	   /CalendarService.php
 	   /UserService.php
-	/Templates
-	.gitignore	
+	.gitignore
 	index.php
+	php_errors.log
 	README.md
