@@ -18,6 +18,6 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     }
 }
 
-require_once __DIR__ . "/../Routers/Router.php";
-$url = $_GET['route'] ?? 'admin/index'; 
-Router::route($url);
+require_once __DIR__ . '/../App/Controllers/AdminController.php';
+$adminController = new AdminController();
+$adminController->index();

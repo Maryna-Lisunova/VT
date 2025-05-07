@@ -1,30 +1,34 @@
+<?php
+// my_project/App/Views/Templates/calendar.php
+
+if (!function_exists('asset')) {
+    function asset(string $path): string {
+        return '/apps/my_project/Public/' . ltrim($path, '/');
+    }
+}
+?>
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="<?= isset($lang) ? htmlspecialchars($lang, ENT_QUOTES, 'UTF-8') : 'en-US'; ?>" dir="<?= isset($dir) ? htmlspecialchars($dir, ENT_QUOTES, 'UTF-8') : 'ltr'; ?>">
 <head>
-    <title>MyAdventCalendar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="images/xmas_crown.ico">
-    <link rel="stylesheet" href="./styles.css">
+    <title><?= isset($title) ? $title : 'MyAdventCalendar'; ?></title>
+    <link rel="icon" type="image/x-icon" href="<?= asset('images/xmas_crown.ico'); ?>">
+    <link rel="stylesheet" href="<?= asset('css/styles.css'); ?>">
     <meta name="msapplication-TileColor" content="#ff250d">
     <meta name="theme-color" content="#ffffff">
+    <?= isset($head) ? $head : ''; ?>
 </head>
-<body>
+<body style="background-image: url('<?= asset($bgImage ?? 'images/christmas_paper1280.jpg'); ?>'); 
+             background-size: cover; background-repeat: no-repeat; background-position: center;">
 <header>
-    <img src="images/crown_black_white.png" alt="Logo" class="header-logo">
-    <h1>MyAdventCalendar</h1>
+    <img src="<?= asset('images/crown_black_white.png'); ?>" alt="Logo" class="header-logo">
+    <h1><?= isset($calendarTitle) ? htmlspecialchars($calendarTitle, ENT_QUOTES, 'UTF-8') : 'MyAdventCalendar'; ?></h1>
 </header>
 
 <div class="calendar">
-    <?php foreach ($calendarData as $tile): ?>
-        <div class="tile tile<?= $tile['day']; ?>" data-day="<?= $tile['day']; ?>" 
-             data-type="<?= $tile['type']; ?>" 
-             <?php if (!empty($tile['content'])): ?>data-content="<?= $tile['content']; ?>"<?php endif; ?>
-             <?php if (!empty($tile['text'])): ?>data-text="<?= $tile['text']; ?>"<?php endif; ?>
-             style="height: <?= $tile['height']; ?>;">
-            <h3><?= $tile['day'] === 0 ? $tile['text'] : $tile['day']; ?></h3>
-        </div>
-    <?php endforeach; ?>
+    <!-- Здесь выводим контент календаря, считанный из внешнего файла -->
+    <?= $calendarContent; ?>
 </div>
 
 <footer>
@@ -36,7 +40,7 @@
     </address>
 </footer>
 
-<link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
+<script src="<?= asset('js/main.js'); ?>"></script>
+<?= isset($scripts) ? $scripts : ''; ?>
 </body>
 </html>

@@ -92,3 +92,40 @@ Stack trace:
 #0 C:\WebData\_site1\apps\my_project\index.php(6): require_once()
 #1 {main}
   thrown in C:\WebData\_site1\apps\my_project\Admin\index.php on line 22
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\WebData\_site1\apps\my_project\Routers\Router.php:49) in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 21
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP Stack trace:
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:11
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   3. AdminController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:38
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   4. AdminController->authenticate() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:10
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   5. header($header = 'WWW-Authenticate: Basic realm="Админская панель"') C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:21
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\WebData\_site1\apps\my_project\Routers\Router.php:49) in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 22
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP Stack trace:
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:11
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   3. AdminController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:38
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   4. AdminController->authenticate() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:10
+[28-Apr-2025 02:00:57 Europe/Minsk] PHP   5. header($header = 'HTTP/1.0 401 Unauthorized') C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:22
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\WebData\_site1\apps\my_project\Routers\Router.php:49) in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 21
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP Stack trace:
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:11
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP   3. AdminController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:38
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP   4. AdminController->authenticate() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:10
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP   5. header($header = 'WWW-Authenticate: Basic realm="Админская панель"') C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:21
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\WebData\_site1\apps\my_project\Routers\Router.php:49) in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 22
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP Stack trace:
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP   2. Router::route($url = '') C:\WebData\_site1\apps\my_project\index.php:11
+[28-Apr-2025 02:01:28 Europe/Minsk] PHP   3. AdminController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:38
+[28-Apr-2025 02:01:29 Europe/Minsk] PHP   4. AdminController->authenticate() C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:10
+[28-Apr-2025 02:01:29 Europe/Minsk] PHP   5. header($header = 'HTTP/1.0 401 Unauthorized') C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:22
+[28-Apr-2025 03:27:09 Europe/Minsk] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in C:\WebData\_site1\apps\my_project\App\Views\Templates\calendar.php:7
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php(7): require()
+#1 C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php(16): CalendarController->render('calendar', Array)
+#2 C:\WebData\_site1\apps\my_project\Routers\Router.php(56): CalendarController->index()
+#3 C:\WebData\_site1\apps\my_project\Routers\Router.php(64): Router::route('calendar')
+#4 C:\WebData\_site1\apps\my_project\index.php(3): require_once('C:\\WebData\\_sit...')
+#5 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Views\Templates\calendar.php on line 7
