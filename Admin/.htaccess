@@ -1,7 +1,6 @@
 RewriteEngine On
 DirectoryIndex index.php
 
-# Перенаправление всех запросов в index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]

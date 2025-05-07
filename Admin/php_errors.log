@@ -5,3 +5,17 @@
 Stack trace:
 #0 {main}
   thrown in C:\WebData\_site1\apps\my_project\Admin\index.php on line 5
+[07-May-2025 10:51:38 Europe/Minsk] PHP Warning:  Trying to access array offset on int in C:\WebData\_site1\apps\my_project\Admin\index.php on line 6
+[07-May-2025 10:51:38 Europe/Minsk] PHP Stack trace:
+[07-May-2025 10:51:38 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\Admin\index.php:0
+[07-May-2025 10:51:38 Europe/Minsk] PHP Warning:  Trying to access array offset on int in C:\WebData\_site1\apps\my_project\Admin\index.php on line 7
+[07-May-2025 10:51:38 Europe/Minsk] PHP Stack trace:
+[07-May-2025 10:51:38 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\Admin\index.php:0
+[07-May-2025 10:51:38 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\WebData\_site1\apps\my_project\config.php:1) in C:\WebData\_site1\apps\my_project\Admin\index.php on line 10
+[07-May-2025 10:51:38 Europe/Minsk] PHP Stack trace:
+[07-May-2025 10:51:38 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\Admin\index.php:0
+[07-May-2025 10:51:38 Europe/Minsk] PHP   2. header($header = 'WWW-Authenticate: Basic realm="Админская панель"') C:\WebData\_site1\apps\my_project\Admin\index.php:10
+[07-May-2025 10:51:38 Europe/Minsk] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\WebData\_site1\apps\my_project\config.php:1) in C:\WebData\_site1\apps\my_project\Admin\index.php on line 11
+[07-May-2025 10:51:38 Europe/Minsk] PHP Stack trace:
+[07-May-2025 10:51:38 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\Admin\index.php:0
+[07-May-2025 10:51:38 Europe/Minsk] PHP   2. header($header = 'HTTP/1.0 401 Unauthorized') C:\WebData\_site1\apps\my_project\Admin\index.php:11

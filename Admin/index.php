@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-// HTTP Basic Authentication
-$validUser = 'admin';
-$validPassword = '12345678';
+$config = require_once __DIR__ . '/../Config/config.php';
+
+$validUser = $config['admin_user'];
+$validPassword = $config['admin_password'];
 
 if (!isset($_SERVER['PHP_AUTH_USER'])) {
     header('WWW-Authenticate: Basic realm="Админская панель"');

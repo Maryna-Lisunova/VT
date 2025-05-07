@@ -1,5 +1,4 @@
 <?php
-// my_project/App/Views/Templates/calendar.php
 
 if (!function_exists('asset')) {
     function asset(string $path): string {
@@ -27,7 +26,7 @@ if (!function_exists('asset')) {
 </header>
 
 <div class="calendar">
-    <!-- Здесь выводим контент календаря, считанный из внешнего файла -->
+    <!-- выводим контент календаря, считанный из внешнего файла -->
     <?= $calendarContent; ?>
 </div>
 
