@@ -212,3 +212,141 @@ Stack trace:
 #2 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
 #3 {main}
   thrown in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php on line 5
+[12-May-2025 07:12:00 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Repository\UserRepository" not found in C:\WebData\_site1\apps\my_project\Services\UserService.php:10
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php(10): Services\UserService->__construct()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#2 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#3 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#4 {main}
+  thrown in C:\WebData\_site1\apps\my_project\Services\UserService.php on line 10
+[12-May-2025 07:14:36 Europe/Minsk] Autoloader error: Не найден файл для класса 'App\Repositories\UserRepository' по пути: 'C:\WebData\_site1\apps\my_project/App/Repositories/UserRepository.php'
+[12-May-2025 07:14:36 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "App\Repositories\UserRepository" not found in C:\WebData\_site1\apps\my_project\Services\UserService.php:10
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php(10): Services\UserService->__construct()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#2 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#3 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#4 {main}
+  thrown in C:\WebData\_site1\apps\my_project\Services\UserService.php on line 10
+[12-May-2025 07:17:16 Europe/Minsk] Autoloader error: Не найден файл для класса 'DatabaseManager' по пути: 'C:\WebData\_site1\apps\my_project/DatabaseManager.php'
+[12-May-2025 07:17:16 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "DatabaseManager" not found in C:\WebData\_site1\apps\my_project\Repository\UserRepository.php:13
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Services\UserService.php(10): Repository\UserRepository->__construct()
+#1 C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php(10): Services\UserService->__construct()
+#2 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#3 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#4 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#5 {main}
+  thrown in C:\WebData\_site1\apps\my_project\Repository\UserRepository.php on line 13
+[12-May-2025 07:19:03 Europe/Minsk] PHP Warning:  parse_ini_file(C:\WebData\_site1\apps\my_project\DataBase/../.env): Failed to open stream: No such file or directory in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 9
+[12-May-2025 07:19:03 Europe/Minsk] PHP Stack trace:
+[12-May-2025 07:19:03 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[12-May-2025 07:19:03 Europe/Minsk] PHP   2. require_once() C:\WebData\_site1\apps\my_project\index.php:26
+[12-May-2025 07:19:03 Europe/Minsk] PHP   3. Router::route($url = 'user') C:\WebData\_site1\apps\my_project\Routers\Router.php:29
+[12-May-2025 07:19:03 Europe/Minsk] PHP   4. UserController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:18
+[12-May-2025 07:19:03 Europe/Minsk] PHP   5. Services\UserService->__construct() C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:10
+[12-May-2025 07:19:03 Europe/Minsk] PHP   6. Repository\UserRepository->__construct() C:\WebData\_site1\apps\my_project\Services\UserService.php:10
+[12-May-2025 07:19:03 Europe/Minsk] PHP   7. DatabaseManager::getInstance() C:\WebData\_site1\apps\my_project\Repository\UserRepository.php:15
+[12-May-2025 07:19:03 Europe/Minsk] PHP   8. DatabaseManager->connectToDatabase() C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:17
+[12-May-2025 07:19:03 Europe/Minsk] PHP   9. parse_ini_file($filename = 'C:\\WebData\\_site1\\apps\\my_project\\DataBase/../.env') C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:9
+[12-May-2025 07:19:03 Europe/Minsk] PHP Warning:  Trying to access array offset on false in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10
+[12-May-2025 07:19:03 Europe/Minsk] PHP Stack trace:
+[12-May-2025 07:19:03 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[12-May-2025 07:19:03 Europe/Minsk] PHP   2. require_once() C:\WebData\_site1\apps\my_project\index.php:26
+[12-May-2025 07:19:03 Europe/Minsk] PHP   3. Router::route($url = 'user') C:\WebData\_site1\apps\my_project\Routers\Router.php:29
+[12-May-2025 07:19:03 Europe/Minsk] PHP   4. UserController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:18
+[12-May-2025 07:19:03 Europe/Minsk] PHP   5. Services\UserService->__construct() C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:10
+[12-May-2025 07:19:03 Europe/Minsk] PHP   6. Repository\UserRepository->__construct() C:\WebData\_site1\apps\my_project\Services\UserService.php:10
+[12-May-2025 07:19:03 Europe/Minsk] PHP   7. DatabaseManager::getInstance() C:\WebData\_site1\apps\my_project\Repository\UserRepository.php:15
+[12-May-2025 07:19:03 Europe/Minsk] PHP   8. DatabaseManager->connectToDatabase() C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:17
+[12-May-2025 07:19:04 Europe/Minsk] PHP Warning:  Trying to access array offset on false in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10
+[12-May-2025 07:19:04 Europe/Minsk] PHP Stack trace:
+[12-May-2025 07:19:04 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[12-May-2025 07:19:04 Europe/Minsk] PHP   2. require_once() C:\WebData\_site1\apps\my_project\index.php:26
+[12-May-2025 07:19:04 Europe/Minsk] PHP   3. Router::route($url = 'user') C:\WebData\_site1\apps\my_project\Routers\Router.php:29
+[12-May-2025 07:19:04 Europe/Minsk] PHP   4. UserController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:18
+[12-May-2025 07:19:04 Europe/Minsk] PHP   5. Services\UserService->__construct() C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:10
+[12-May-2025 07:19:04 Europe/Minsk] PHP   6. Repository\UserRepository->__construct() C:\WebData\_site1\apps\my_project\Services\UserService.php:10
+[12-May-2025 07:19:04 Europe/Minsk] PHP   7. DatabaseManager::getInstance() C:\WebData\_site1\apps\my_project\Repository\UserRepository.php:15
+[12-May-2025 07:19:04 Europe/Minsk] PHP   8. DatabaseManager->connectToDatabase() C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:17
+[12-May-2025 07:19:04 Europe/Minsk] PHP Warning:  Trying to access array offset on false in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10
+[12-May-2025 07:19:04 Europe/Minsk] PHP Stack trace:
+[12-May-2025 07:19:04 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[12-May-2025 07:19:04 Europe/Minsk] PHP   2. require_once() C:\WebData\_site1\apps\my_project\index.php:26
+[12-May-2025 07:19:04 Europe/Minsk] PHP   3. Router::route($url = 'user') C:\WebData\_site1\apps\my_project\Routers\Router.php:29
+[12-May-2025 07:19:04 Europe/Minsk] PHP   4. UserController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:18
+[12-May-2025 07:19:04 Europe/Minsk] PHP   5. Services\UserService->__construct() C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:10
+[12-May-2025 07:19:04 Europe/Minsk] PHP   6. Repository\UserRepository->__construct() C:\WebData\_site1\apps\my_project\Services\UserService.php:10
+[12-May-2025 07:19:04 Europe/Minsk] PHP   7. DatabaseManager::getInstance() C:\WebData\_site1\apps\my_project\Repository\UserRepository.php:15
+[12-May-2025 07:19:04 Europe/Minsk] PHP   8. DatabaseManager->connectToDatabase() C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:17
+[12-May-2025 07:19:04 Europe/Minsk] PHP Warning:  Trying to access array offset on false in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10
+[12-May-2025 07:19:04 Europe/Minsk] PHP Stack trace:
+[12-May-2025 07:19:04 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[12-May-2025 07:19:04 Europe/Minsk] PHP   2. require_once() C:\WebData\_site1\apps\my_project\index.php:26
+[12-May-2025 07:19:04 Europe/Minsk] PHP   3. Router::route($url = 'user') C:\WebData\_site1\apps\my_project\Routers\Router.php:29
+[12-May-2025 07:19:04 Europe/Minsk] PHP   4. UserController->__construct() C:\WebData\_site1\apps\my_project\Routers\Router.php:18
+[12-May-2025 07:19:04 Europe/Minsk] PHP   5. Services\UserService->__construct() C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:10
+[12-May-2025 07:19:04 Europe/Minsk] PHP   6. Repository\UserRepository->__construct() C:\WebData\_site1\apps\my_project\Services\UserService.php:10
+[12-May-2025 07:19:04 Europe/Minsk] PHP   7. DatabaseManager::getInstance() C:\WebData\_site1\apps\my_project\Repository\UserRepository.php:15
+[12-May-2025 07:19:04 Europe/Minsk] PHP   8. DatabaseManager->connectToDatabase() C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:17
+[12-May-2025 07:19:04 Europe/Minsk] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:10
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(10): mysqli->__construct(NULL, NULL, Object(SensitiveParameterValue), NULL)
+#1 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(17): DatabaseManager->connectToDatabase()
+#2 C:\WebData\_site1\apps\my_project\Repository\UserRepository.php(15): DatabaseManager::getInstance()
+#3 C:\WebData\_site1\apps\my_project\Services\UserService.php(10): Repository\UserRepository->__construct()
+#4 C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php(10): Services\UserService->__construct()
+#5 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#6 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#7 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#8 {main}
+  thrown in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10
+[12-May-2025 07:22:18 Europe/Minsk] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'ваш_пользователь'@'localhost' (using password: YES) in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:10
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(10): mysqli->__construct('localhost', '\xD0\xB2\xD0\xB0\xD1\x88_\xD0\xBF\xD0\xBE\xD0\xBB\xD1\x8C...', Object(SensitiveParameterValue), 'calendar_base')
+#1 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(17): DatabaseManager->connectToDatabase()
+#2 C:\WebData\_site1\apps\my_project\Repository\UserRepository.php(15): DatabaseManager::getInstance()
+#3 C:\WebData\_site1\apps\my_project\Services\UserService.php(10): Repository\UserRepository->__construct()
+#4 C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php(10): Services\UserService->__construct()
+#5 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#6 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#7 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#8 {main}
+  thrown in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10
+[12-May-2025 07:23:47 Europe/Minsk] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:10
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(10): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'calendar_base')
+#1 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(17): DatabaseManager->connectToDatabase()
+#2 C:\WebData\_site1\apps\my_project\Repository\UserRepository.php(15): DatabaseManager::getInstance()
+#3 C:\WebData\_site1\apps\my_project\Services\UserService.php(10): Repository\UserRepository->__construct()
+#4 C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php(10): Services\UserService->__construct()
+#5 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#6 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#7 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#8 {main}
+  thrown in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10
+[12-May-2025 07:23:51 Europe/Minsk] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:10
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(10): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'calendar_base')
+#1 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(17): DatabaseManager->connectToDatabase()
+#2 C:\WebData\_site1\apps\my_project\Repository\UserRepository.php(15): DatabaseManager::getInstance()
+#3 C:\WebData\_site1\apps\my_project\Services\UserService.php(10): Repository\UserRepository->__construct()
+#4 C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php(10): Services\UserService->__construct()
+#5 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#6 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#7 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#8 {main}
+  thrown in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10
+[12-May-2025 07:25:12 Europe/Minsk] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php:10
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(10): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'calendar_base')
+#1 C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php(17): DatabaseManager->connectToDatabase()
+#2 C:\WebData\_site1\apps\my_project\Repository\UserRepository.php(15): DatabaseManager::getInstance()
+#3 C:\WebData\_site1\apps\my_project\Services\UserService.php(10): Repository\UserRepository->__construct()
+#4 C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php(10): Services\UserService->__construct()
+#5 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#6 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#7 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#8 {main}
+  thrown in C:\WebData\_site1\apps\my_project\DataBase\DatabaseManager.php on line 10

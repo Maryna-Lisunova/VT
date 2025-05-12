@@ -9,23 +9,38 @@
 	      /CalendarController.php
 	      /UserController.php
 	   /Models
+	      /User.php
+	      /Item.php
+	      /Genre.php
 	      /FileManager.php
 	   /Views	      
 	      /Templates
+	         /user.php
+		 /interface.html
 	         /calendar.php
+		 /admin.php
 	/Config
+	    /config.php
 	/DataBase
+	    /spheme.png
+	    /DatabaseManager.php
+	/Migration
+	    /calendar_base.sql
 	/Public
 	   /images
 	   /js
 	   /css
 	   /html
 	/Repository
+	    /UserRepository.php
+	    /ItemRepository.php
+	    /GenreRepository.php
 	/Routers
 	   /Router.php
 	/Services
 	   /CalendarService.php
 	   /UserService.php
+	   /AdminService.php
 	.gitignore
 	index.php
 	php_errors.log

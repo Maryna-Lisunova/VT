@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Вход на сайт</title>
+</head>
+<body>
+  <h1>Авторизация</h1>
+  <form action="login.php" method="post">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+    <br/>
+
+    <label for="password">Пароль:</label>
+    <input type="password" name="password" id="password" required>
+    <br/>
+
+    <label for="remember">
+      <input type="checkbox" name="remember" id="remember"> Запомнить меня
+    </label>
+    <br/>
+
+    <div class="g-recaptcha" data-sitekey="ВАШ_SITE_KEY"></div>
+    <br/>
+
+    <button type="submit">Войти</button>
+  </form>
+</body>
+</html>
