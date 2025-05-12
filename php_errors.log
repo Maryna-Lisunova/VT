@@ -129,3 +129,86 @@ Stack trace:
 #4 C:\WebData\_site1\apps\my_project\index.php(3): require_once('C:\\WebData\\_sit...')
 #5 {main}
   thrown in C:\WebData\_site1\apps\my_project\App\Views\Templates\calendar.php on line 7
+[07-May-2025 12:41:19 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\UserService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#2 C:\WebData\_site1\apps\my_project\index.php(17): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php on line 11
+[07-May-2025 12:43:19 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\UserService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#2 C:\WebData\_site1\apps\my_project\index.php(17): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php on line 11
+[07-May-2025 12:43:29 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\UserService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#2 C:\WebData\_site1\apps\my_project\index.php(17): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php on line 11
+[07-May-2025 12:44:37 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\UserService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#2 C:\WebData\_site1\apps\my_project\index.php(17): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php on line 11
+[07-May-2025 12:46:50 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\UserService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#2 C:\WebData\_site1\apps\my_project\index.php(17): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php on line 11
+[07-May-2025 12:46:55 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\UserService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(18): UserController->__construct()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('user')
+#2 C:\WebData\_site1\apps\my_project\index.php(17): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\UserController.php on line 11
+[07-May-2025 12:47:59 Europe/Minsk] PHP Fatal error:  strict_types declaration must be the very first statement in the script in C:\WebData\_site1\apps\my_project\index.php on line 10
+[07-May-2025 12:48:03 Europe/Minsk] PHP Fatal error:  strict_types declaration must be the very first statement in the script in C:\WebData\_site1\apps\my_project\index.php on line 10
+[12-May-2025 05:41:35 Europe/Minsk] PHP Warning:  require_once(DatabaseManager.php): Failed to open stream: No such file or directory in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php on line 5
+[12-May-2025 05:41:35 Europe/Minsk] PHP Stack trace:
+[12-May-2025 05:41:35 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[12-May-2025 05:41:35 Europe/Minsk] PHP   2. require_once() C:\WebData\_site1\apps\my_project\index.php:26
+[12-May-2025 05:41:35 Europe/Minsk] PHP   3. Router::route($url = 'calendar') C:\WebData\_site1\apps\my_project\Routers\Router.php:29
+[12-May-2025 05:41:35 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\Routers\Router.php:14
+[12-May-2025 05:41:35 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required 'DatabaseManager.php' (include_path='.;C:\php\pear') in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php:5
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(14): require_once()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('calendar')
+#2 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php on line 5
+[12-May-2025 05:44:56 Europe/Minsk] PHP Warning:  require_once(/../DataBase/DatabaseManager.php): Failed to open stream: No such file or directory in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php on line 5
+[12-May-2025 05:44:56 Europe/Minsk] PHP Stack trace:
+[12-May-2025 05:44:56 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[12-May-2025 05:44:56 Europe/Minsk] PHP   2. require_once() C:\WebData\_site1\apps\my_project\index.php:26
+[12-May-2025 05:44:56 Europe/Minsk] PHP   3. Router::route($url = 'calendar') C:\WebData\_site1\apps\my_project\Routers\Router.php:29
+[12-May-2025 05:44:56 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\Routers\Router.php:14
+[12-May-2025 05:44:56 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required '/../DataBase/DatabaseManager.php' (include_path='.;C:\php\pear') in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php:5
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(14): require_once()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('calendar')
+#2 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php on line 5
+[12-May-2025 05:48:57 Europe/Minsk] PHP Warning:  require_once(/../../DataBase/DatabaseManager.php): Failed to open stream: No such file or directory in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php on line 5
+[12-May-2025 05:48:57 Europe/Minsk] PHP Stack trace:
+[12-May-2025 05:48:57 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\index.php:0
+[12-May-2025 05:48:57 Europe/Minsk] PHP   2. require_once() C:\WebData\_site1\apps\my_project\index.php:26
+[12-May-2025 05:48:57 Europe/Minsk] PHP   3. Router::route($url = 'calendar') C:\WebData\_site1\apps\my_project\Routers\Router.php:29
+[12-May-2025 05:48:57 Europe/Minsk] PHP   4. require_once() C:\WebData\_site1\apps\my_project\Routers\Router.php:14
+[12-May-2025 05:48:57 Europe/Minsk] PHP Fatal error:  Uncaught Error: Failed opening required '/../../DataBase/DatabaseManager.php' (include_path='.;C:\php\pear') in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php:5
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Routers\Router.php(14): require_once()
+#1 C:\WebData\_site1\apps\my_project\Routers\Router.php(29): Router::route('calendar')
+#2 C:\WebData\_site1\apps\my_project\index.php(26): require_once('C:\\WebData\\_sit...')
+#3 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\CalendarController.php on line 5

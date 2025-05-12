@@ -10,10 +10,7 @@
 	      /UserController.php
 	   /Models
 	      /FileManager.php
-	   /Views
-	      /Admin
-	         /interface.html
-		 /admin.php
+	   /Views	      
 	      /Templates
 	         /calendar.php
 	/Config

@@ -19,3 +19,69 @@ Stack trace:
 [07-May-2025 10:51:38 Europe/Minsk] PHP Stack trace:
 [07-May-2025 10:51:38 Europe/Minsk] PHP   1. {main}() C:\WebData\_site1\apps\my_project\Admin\index.php:0
 [07-May-2025 10:51:38 Europe/Minsk] PHP   2. header($header = 'HTTP/1.0 401 Unauthorized') C:\WebData\_site1\apps\my_project\Admin\index.php:11
+[07-May-2025 13:00:36 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:03:53 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:06:09 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:06:11 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:06:13 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:06:27 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:14:55 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:18:23 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:25:32 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:26:46 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:11
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 11
+[07-May-2025 13:27:29 Europe/Minsk] PHP Parse error:  syntax error, unexpected token "require_once", expecting "function" in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 8
+[07-May-2025 13:27:55 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:12
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 12
+[07-May-2025 13:38:06 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:13
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 13
+[07-May-2025 13:38:21 Europe/Minsk] PHP Fatal error:  Uncaught Error: Class "Services\AdminService" not found in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php:13
+Stack trace:
+#0 C:\WebData\_site1\apps\my_project\Admin\index.php(23): AdminController->__construct()
+#1 {main}
+  thrown in C:\WebData\_site1\apps\my_project\App\Controllers\AdminController.php on line 13

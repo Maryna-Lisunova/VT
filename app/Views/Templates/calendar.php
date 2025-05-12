@@ -39,7 +39,7 @@ if (!function_exists('asset')) {
     </address>
 </footer>
 
-<script src="<?= asset('js/main.js'); ?>"></script>
+<script src="<?= asset('js/script.js'); ?>"></script>
 <?= isset($scripts) ? $scripts : ''; ?>
 </body>
 </html>
