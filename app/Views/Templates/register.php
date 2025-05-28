@@ -1,6 +1,86 @@
 <?php
-session_start();
-require_once '/../../../DataBase/DatabaseManager.php'; 
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    ?>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Регистрация</title>
+        <!-- Подключаем скрипт Google reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f7f7f7;
+                padding: 20px;
+            }
+            form {
+                background: #fff;
+                padding: 20px;
+                border-radius: 4px;
+                max-width: 400px;
+                margin: auto;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            form div {
+                margin-bottom: 15px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+            button {
+                padding: 10px 20px;
+                background: #28a745;
+                border: none;
+                color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            button:hover {
+                background: #218838;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center;">Регистрация</h1>
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+            <div>
+                <label for="username">Имя пользователя:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="password">Пароль:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <label for="confirm_password">Подтвердите пароль:</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+            </div>
+            <div class="g-recaptcha" data-sitekey="ВАШ_SITE_KEY"></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">Зарегистрироваться</button>
+            </div>
+        </form>
+    </body>
+    </html>
+    <?php
+    exit;
+}
+
+require_once __DIR__ . '/../../../DataBase/DatabaseManager.php'; 
 
 $username        = trim($_POST['username'] ?? '');
 $email           = trim($_POST['email'] ?? '');
@@ -27,7 +107,8 @@ $secretKey = 'ВАШ_SECRET_KEY';
 $verifyURL = "https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$captchaResponse}";
 $verifyResponse = file_get_contents($verifyURL);
 $responseData = json_decode($verifyResponse);
-if (!$responseData->success) {
+
+if (!$responseData || !$responseData->success) {
     $errors[] = "Проверка капчи не пройдена.";
 }
 

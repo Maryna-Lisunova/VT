@@ -25,5 +25,4 @@ if (preg_match("#^admin/?$#i", $requestUri)) {
 
 require_once __DIR__ . '/Routers/Router.php';
 
-$router = new Router($requestUri);
-$router->dispatch();
+Router::route($requestUri);

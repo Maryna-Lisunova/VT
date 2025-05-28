@@ -11,17 +11,9 @@ class UserRepository {
     private \mysqli $db;
 
     public function __construct() {
-        // Получаем соединение через DatabaseManager, который теперь подключен
         $this->db = \DatabaseManager::getInstance()->getConnection();
     }
 
-    /**
-     * Добавляет нового пользователя в БД.
-     *
-     * @param User $user
-     * @return int Идентификатор вставленной записи.
-     * @throws \Exception В случае ошибок подготовки или выполнения запроса.
-     */
     public function create(User $user): int {
         $stmt = $this->db->prepare("INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)");
         if (!$stmt) {
@@ -31,18 +23,12 @@ class UserRepository {
         if (!$stmt->execute()) {
             throw new \Exception("Execute failed: " . $stmt->error);
         }
-        $insertedId = $stmt->insert_id;
+        
+	$insertedId = $this->db->insert_id;
         $stmt->close();
         return $insertedId;
     }
 
-    /**
-     * Возвращает пользователя по его ID.
-     *
-     * @param int $id
-     * @return User|null
-     * @throws \Exception Если не удалось подготовить запрос.
-     */
     public function getById(int $id): ?User {
         $stmt = $this->db->prepare("SELECT id, username, email, password_hash FROM users WHERE id = ?");
         if (!$stmt) {
@@ -60,11 +46,6 @@ class UserRepository {
         return $user;
     }
 
-    /**
-     * Возвращает список всех пользователей.
-     *
-     * @return User[]
-     */
     public function getAll(): array {
         $result = $this->db->query("SELECT id, username, email, password_hash FROM users");
         $users = [];
@@ -74,13 +55,6 @@ class UserRepository {
         return $users;
     }
 
-    /**
-     * Обновляет данные пользователя.
-     *
-     * @param User $user
-     * @return bool
-     * @throws \Exception Если ID пользователя равен null или запрос не удалось подготовить.
-     */
     public function update(User $user): bool {
         if ($user->id === null) {
             throw new \Exception("User id is null");
@@ -95,13 +69,6 @@ class UserRepository {
         return $result;
     }
 
-    /**
-     * Удаляет пользователя по его ID.
-     *
-     * @param int $id
-     * @return bool
-     * @throws \Exception Если не удалось подготовить запрос.
-     */
     public function delete(int $id): bool {
         $stmt = $this->db->prepare("DELETE FROM users WHERE id = ?");
         if (!$stmt) {
@@ -113,13 +80,6 @@ class UserRepository {
         return $result;
     }
     
-    /**
-     * Ищет пользователя по email.
-     *
-     * @param string $email
-     * @return User|null
-     * @throws \Exception Если не удалось подготовить запрос.
-     */
     public function getByEmail(string $email): ?User {
         $stmt = $this->db->prepare("SELECT id, username, email, password_hash FROM users WHERE email = ?");
         if (!$stmt) {

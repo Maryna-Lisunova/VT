@@ -60,7 +60,7 @@ class UserService {
             return ['success' => false, 'message' => 'Пользователь с данным email уже существует'];
         }
 
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+	$passwordHash = password_hash($password, PASSWORD_DEFAULT);
         $newUser = new \App\Models\User(null, $username, $email, $passwordHash);
         $userId = $this->userRepository->create($newUser);
         if ($userId > 0) {

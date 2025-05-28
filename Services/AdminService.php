@@ -21,7 +21,6 @@ class AdminService {
     }
 
     public function isAllowed(string $path): bool {
-        // Публичная директория – ../Public относительно папки Services
         $publicRoot = realpath(__DIR__ . '/../Public');
         foreach ($this->allowedDirectories as $dir) {
             $allowedPath = realpath($publicRoot . '/' . $dir);
